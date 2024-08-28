@@ -53,3 +53,10 @@ jobs:
         uses: ValkyrienSkies/Minecraft-Architectury-Testing@v1.9
         with:
           serverType: ${{ matrix.serverType }}
+
+      - name: Capture build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ValkyrienSkies
+          path: |
+            ${{ matrix.serverType }}/build/libs/
