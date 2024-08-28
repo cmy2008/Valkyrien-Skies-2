@@ -60,3 +60,4 @@ jobs:
           name: ValkyrienSkies
           path: |
             ${{ matrix.serverType }}/build/libs/
+            build/libs/
