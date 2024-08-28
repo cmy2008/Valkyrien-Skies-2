@@ -81,7 +81,7 @@ public abstract class MixinLevelRendererVanilla {
 
     /**
      * Force frustum update if the ship moves and the camera doesn't
-     */
+     
     @ModifyExpressionValue(
         at = @At(
             value = "INVOKE",
@@ -96,6 +96,7 @@ public abstract class MixinLevelRendererVanilla {
         return needsFrustumUpdate ||
             (player != null && VSGameUtilsKt.getShipMountedTo(player) != null);
     }
+    */
 
     /**
      * Add ship render chunks to [renderChunks]

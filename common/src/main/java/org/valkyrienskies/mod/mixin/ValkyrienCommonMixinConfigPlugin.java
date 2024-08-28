@@ -76,12 +76,10 @@ public class ValkyrienCommonMixinConfigPlugin implements IMixinConfigPlugin {
         }
         if (mixinClassName.contains("org.valkyrienskies.mod.mixin.mod_compat.create.client.trackOutlines")) {
             //interactive has its own track outline stuff so disable fixed version of VS2's track outline stuff
-            if (classExists("org.valkyrienskies.create_interactive.mixin.client.MixinTrackBlockOutline")) {
-                MixinService.getService().getLogger("mixin")
-                    .info("[VS2] found Interactive, disabling VS2's trackOutline Compat - " +
-                        mixinClassName.substring(mixinClassName.lastIndexOf(".") + 1));
-                return false;
-            }
+            MixinService.getService().getLogger("mixin")
+                .info("[VS2] found Interactive, disabling VS2's trackOutline Compat - " +
+                    mixinClassName.substring(mixinClassName.lastIndexOf(".") + 1));
+            return false;
         }
 
         return true;
